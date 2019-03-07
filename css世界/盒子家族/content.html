@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>content与替换元素</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		img{
+			display: inline-block;
+			width: 100px;
+			height:100px;
+		}
+		div::before{
+			content: url(../image/timg.jpg);
+			display: block;
+			width: 200px;
+			height: 200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<img>
+	<!-- 此时可以把1.jpg替换成2.png -->
+	<!-- 这种通过修改某个属性值呈现的内容就可以被替换的元素被称为"替换元素" -->
+	<!-- 根据这个特性推断 -->
+	<!-- <img>、<object>、<video>、<iframe>、<select>、<textarea>和<input>都是替换元素 -->
+		<!-- 特性： -->
+			<!-- 1: 内容的外观不受页面上的css的影响 -->
+			<!-- 2:有自己的尺寸 -->
+			<!-- 3:在很多css属性上有自己的一套表现规则 -->
+		<!-- 替换元素的默认display值不一样 -->
+
+	<input type="button" value="按钮">
+	<button>按钮</button>
+</body>
+</html>

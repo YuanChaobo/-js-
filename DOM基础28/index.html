@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom基础28</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<style type="text/css">
+		img{
+			display: block;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div>
+		<div>
+			
+		<p >p1</p>
+		</div>
+		<div class="">
+			<p class="p2 p1">p2</p>
+		</div>
+		<p class="p3">p3</p>
+		<p class="p4">p4</p>
+	</div> -->
+	<div id="containerz" class="container">
+		<div>
+			<img src="http://t8.baidu.com/it/u=3660968530,985748925&fm=191&app=48&wm=1,17,90,45,20,7&wmo=0,0&n=0&g=0n&f=JPEG?sec=1853310920&t=9b4f100f0eedfe853fad24a58a4e1ad7" alt="外层图片">
+			<section>
+				<img src="http://pic3.nipic.com/20090527/1242397_102231006_2.jpg" alt="内1">
+				<img  id="comaprelimg" src="http://img.hb.aicdn.com/83da0f1288d4f2cf183fc0002f8ae8a9e152b2c0af02-CK8uhJ_fw658" alt="内2">
+				<img src="http://img.hb.aicdn.com/50132da960309eac73e1e390b9bbfd142e5952e818e28-n4k0NJ_fw658" alt="内3">
+				<img src="http://img.hb.aicdn.com/6aa697b7897c89deac1b5cd77950223974bc48d2d4a1-2uDqEr_fw658" alt="内4">
+			</section>
+		</div>
+		
+	</div>
+</body>
+	<script type="text/javascript">
+		// 1：判断是否是container的子元素
+		var dos = document.getElementById('containerz');
+		var allImg = document.getElementsByTagName('img');
+		dos.onclick=function(ev){
+			let e = ev  || window.event;
+			console.log( dos.compareDocumentPosition(e.target));
+		}
+		// 2: 判断点击的元素是否是img
+		dos.onclick = function(ev){
+			let e = ev || window.event;
+			// if(e.target.nodeName=='IMG'){
+			// 	console.log('true')
+			// }else{
+			// 	console.log('false')
+			// }
+			console.log(e.target instanceof Image)
+		}
+	</script>
+</html>

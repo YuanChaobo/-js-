@@ -1,0 +1,88 @@
+<!--
+	*@Author:苑超波
+	*@Date:2019-02-21 09:31:00
+	*@Last Modified by:Yuan
+	*@E-mail:yuanchaob@163.com
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js基础测试28</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+	<div id="xl">
+		销量
+	</div>
+	<script type="text/javascript">
+		var x = document.getElementById('xl').innerText;
+		console.log(x);
+		let arr = [0,1,2,3,4,5];
+		// 1:指定任意索引，对应数组项往前移一位
+			// function along(arr,x){
+			// 	if(x==0){
+			// 		document.write(arr)
+			// 	}else{
+			// 		var ind = arr[x];
+			// 		arr.splice(x,1);
+			// 		arr.splice(x-1,0,ind);
+			// 		document.write(arr+'</br>')
+			// 	}
+			// }
+			// along(arr,3)
+		// 2:指定任意索引，对应数组项移动到最前面
+			// function before(arr,x){
+			// 	if(x<=0){
+			// 		document.write(arr)
+			// 	}else{
+			// 		var ind = arr[x];
+			// 		arr.splice(x,1);
+			// 		arr.unshift(ind);
+			// 		document.write(arr+'</br>')
+			// 	}
+			// }
+			// before(arr,2)
+		// 3:指定任意索引，对应数组项移动到最后面
+			// function after(arr,x){
+			// 	if(x>=arr.length-1){
+			// 		document.write(arr)
+			// 	}else{
+			// 		var ind = arr[x];
+			// 		arr.splice(x,1);
+			// 		arr.push(ind);
+			// 		document.write(arr)
+			// 	}
+			// }
+			// after(arr,0)
+		// 4:手写一个方法，实现数组任意两项的位置调换
+			function will(arr,one,two){
+				// var on = arr[one];
+				// var tw = arr[two];
+
+				// arr.splice(one,1);
+				// arr.splice(two-1,1);
+
+				// arr.splice(one,0,tw);
+				// arr.splice(two,0,on);
+				// 临时变量存储
+				let temp;
+				temp = arr[one];
+				arr[one] = arr[two];
+				arr[ong]=temp;
+				console.log(arr)
+			}
+			// will(arr,0,3)；
+			// ex6语法 互换位置
+			function excahanga(arr,ind1,ind2){
+				// 1 - arr.length -> arr.length-1  arr的范围
+				[arr[ind1],arr[ind2]]=[arr[ind2],arr[ind1]]
+			};
+
+			// 1. 更兼容的方法：临时变量存储交换；
+			// 2. 支持ES6：[ arr[i1], arr[i2] ] = [ arr[i2], arr[i1] ];
+			// 3. 索引合法性判断考虑负的范围； -1*length -> length-1
+			// 4. 数组所有的位置移动本质上都是位置交换！
+	</script>
+</body>
+</html>
